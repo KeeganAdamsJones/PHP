@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+Keegan Jones
+CSD 440
+Module 7
+11/22/2021
+
+*Write a form program that prompts a user to enter seven 
+different fields of data, using a minimum of four different 
+data type entries.
+*When the form is submitted to your PHP CGI, you are then to 
+verify all fields were populated and the data was correctly entered.
+*Then, in your return, display the data entered in a well 
+formatted page, otherwise you will return an error display 
+to report the problem.
+*Title all files starting with your first name such as 
+<YourFirstName> Form.php. Examples:
+    JohnForm.php
+    JohnForm.html
+    SueResponse.php
+    LarryReply.php
+    Etc.
+-->
+
+<head>
+    <title>Keegan Form</title> 
+</head>
+
+<body>
+    <h1>Keegan's Birthday Form</h1>
+
+    <form action='postKeeganForm.php' method='post'>
+        <!-- First Name -->
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        
+        
+        <!-- Middle Initial -->
+        <label for="mname">Middle name:</label>
+        <input type="text" id="mname" name="mname"><br><br>
+
+        <!-- Last Name -->
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <!-- Birthday -->
+        <label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+        
+        <!-- Phone # -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"required>
+        <small>Format: 123-456-7890</small><br><br>
+        
+        <!-- Address -->
+        <label for='textarea'>Address:</label>
+        <textarea id="textarea" name="textarea" rows='6' cols='50'></textarea><br><br>
+        
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+
+      </form>
+
+</body>
+
+</html>
